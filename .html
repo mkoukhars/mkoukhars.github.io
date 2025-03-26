@@ -1,7 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria K</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .welcome-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+        .name {
+            font-family: serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .social-button {
+            display: inline-block;
+            background-color: #FFB6C1;  /* Light Pink */
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+        .social-button:hover {
+            background-color: #FF69B4;  /* Darker pink on hover */
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="welcome-section">
+        <h1 class="name">Maria K</h1>
+        <h2>Welcome to my Portfolio!</h2>
+        <p>Scroll down to see my projects!</p>
+        
+        <div class="social-buttons">
+            <a href="https://www.linkedin.com/in/maria-koukharsky-24286b296/" target="_blank" class="social-button">
+                LinkedIn
+            </a>
+            <a href="https://github.com/mkoukhars" target="_blank" class="social-button">
+                GitHub
+            </a>
+        </div>
+    </div>
+
+    <div id="projects">
+        <!-- Future project sections will go here -->
+    </div>
 </body>
 </html>
