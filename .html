@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maria K</title>
+    <title>Maria Koukharsky</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             text-align: center;
+        }
+        .header-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
         }
         .welcome-section {
             max-width: 800px;
@@ -30,7 +35,7 @@
         }
         .social-button {
             display: inline-block;
-            background-color: #FFB6C1;  /* Light Pink */
+            background-color: #FFB6C1;
             color: white;
             padding: 8px 15px;
             text-decoration: none;
@@ -40,11 +45,64 @@
             transition: background-color 0.3s ease;
         }
         .social-button:hover {
-            background-color: #FF69B4;  /* Darker pink on hover */
+            background-color: #FF69B4;
+        }
+        .project-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            text-align: left;
+        }
+        .project-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .project-description {
+            margin-bottom: 20px;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .carousel-item {
+            display: none;
+            width: 100%;
+        }
+        .carousel-item.active {
+            display: block;
+        }
+        .carousel img, .carousel video {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+        }
+        .carousel-control {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-control.prev {
+            left: 10px;
+        }
+        .carousel-control.next {
+            right: 10px;
         }
     </style>
 </head>
 <body>
+    <img src="header.png" alt="Header" class="header-image">
+
     <div class="welcome-section">
         <h1 class="name">Maria K</h1>
         <h2>Welcome to my Portfolio!</h2>
@@ -61,7 +119,67 @@
     </div>
 
     <div id="projects">
-        <!-- Future project sections will go here -->
+        <div class="project-section">
+            <h2 class="project-title">Hack Her Website 2025 - Tricolour Savings</h2>
+            <p class="project-description">
+                My group participated in the QWIC Hackathon and got Best Beginner Hack with our website demo with our idea to create a student-friendly website REUSING and RECYCLING old textbooks, calculators, student ID holders, and more!
+            </p>
+            
+            <div class="carousel" id="projectCarousel1">
+                <div class="carousel-item active">
+                    <img src="tcs logo.png" alt="Tricolour Savings Logo">
+                </div>
+                <div class="carousel-item">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ks56YXHU9E8" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="carousel-control prev" onclick="changeSlide(this, -1)">&#10094;</div>
+                <div class="carousel-control next" onclick="changeSlide(this, 1)">&#10095;</div>
+            </div>
+
+            <div class="social-buttons" style="margin-top: 20px;">
+                <a href="https://devpost.com/software/tricolour-savings" target="_blank" class="social-button">
+                    Devpost
+                </a>
+            </div>
+        </div>
+
+        <div class="project-section">
+            <h2 class="project-title">Biohack 2025 Website - MAYLA</h2>
+            <p class="project-description">
+                My team participated on the Synapsis Biohackathon where we got awarded third place. The Problem we focused on resolving was the issue of how many patients eager to participate in clinical trials struggle to find opportunities due to lack of awareness, slow recruitment, and accessibility barriers. Our solution? A streamlined physician-patient platform to bridge this gap. I took charge of developing the demo prototype and coding the platform, which enables physicians to upload patient medical files and then would go on to match patients with relevant clinical trials and provide a community space for support. 
+            </p>
+            
+            <div class="carousel" id="projectCarousel2">
+                <div class="carousel-item active">
+                    <img src="mayla.png" alt="MAYLA Project Image">
+                </div>
+                <div class="carousel-item">
+                    <video width="560" height="315" controls>
+                        <source src="vid for biohack.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="carousel-control prev" onclick="changeSlide(this, -1)">&#10094;</div>
+                <div class="carousel-control next" onclick="changeSlide(this, 1)">&#10095;</div>
+            </div>
+
+            <div class="social-buttons" style="margin-top: 20px;">
+                <a href="https://github.com/mkoukhars/BIOHACKATHON" target="_blank" class="social-button">
+                    GitHub Repository
+                </a>
+            </div>
+        </div>
     </div>
+
+    <script>
+        function changeSlide(carousel, direction) {
+            const slides = carousel.closest('.carousel').querySelectorAll('.carousel-item');
+            const currentSlide = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+            
+            slides[currentSlide].classList.remove('active');
+            const newSlideIndex = (currentSlide + direction + slides.length) % slides.length;
+            slides[newSlideIndex].classList.add('active');
+        }
+    </script>
 </body>
 </html>
