@@ -1,211 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maria Koukharsky</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        .header-image {
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-        }
-        .welcome-section {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
-        .name {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        .social-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .social-button {
-            display: inline-block;
-            background-color: #FFB6C1;
-            color: white;
-            padding: 8px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            transition: background-color 0.3s ease;
-        }
-        .social-button:hover {
-            background-color: #FF69B4;
-        }
-        .intro-section {
-            background-color: #FFE4E1;
-            padding: 30px 20px;
-            margin: 20px 0;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 10px;
-        }
-        .personal-image {
-            max-width: 300px;
-            max-height: 400px;
-            border-radius: 10px;
-            margin-top: 20px;
-            object-fit: cover;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        /* Rest of the previous CSS remains the same */
-        .project-section {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 50px 20px;
-            text-align: left;
-        }
-        .project-title {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        .project-description {
-            margin-bottom: 20px;
-        }
-        .carousel {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-        .carousel-item {
-            display: none;
-            width: 100%;
-        }
-        .carousel-item.active {
-            display: block;
-        }
-        .carousel img, .carousel video {
-            width: 100%;
-            max-height: 450px;
-            object-fit: cover;
-        }
-        .carousel-control {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: 50px;
-            height: 50px;
-            background: rgba(0,0,0,0.5);
-            color: white;
-            transform: translateY(-50%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .carousel-control.prev {
-            left: 10px;
-        }
-        .carousel-control.next {
-            right: 10px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maria Koukharsky</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    line-height:1.6;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+.header-image{
+    width:100%;
+    max-height:300px;
+    object-fit:cover;
+}
+
+.welcome-section{
+    max-width:800px;
+    margin:0 auto;
+    padding:50px 20px;
+}
+
+.name{
+    font-family:'Press Start 2P',cursive;
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+.social-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+.social-button{
+    display:inline-block;
+    background-color:#FFB6C1;
+    color:white;
+    padding:8px 15px;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+    font-size:0.9rem;
+    transition:background-color 0.3s ease;
+}
+
+.social-button:hover{
+    background-color:#FF69B4;
+}
+
+.intro-section{
+    background-color:#FFE4E1;
+    padding:30px 20px;
+    margin:20px 0;
+    max-width:800px;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:10px;
+}
+
+.personal-image{
+    max-width:300px;
+    max-height:400px;
+    border-radius:10px;
+    margin-top:20px;
+    object-fit:cover;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+
+.project-section{
+    max-width:800px;
+    margin:0 auto;
+    padding:50px 20px;
+    text-align:left;
+}
+
+.project-title{
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.project-description{
+    margin-bottom:20px;
+}
+
+.project-image{
+    width:100%;
+    max-width:600px;
+    border-radius:10px;
+    margin-top:15px;
+}
+
+.carousel{
+    position:relative;
+    width:100%;
+    max-width:800px;
+    margin:0 auto;
+    overflow:hidden;
+}
+
+.carousel-item{
+    display:none;
+    width:100%;
+}
+
+.carousel-item.active{
+    display:block;
+}
+
+.carousel img,.carousel video{
+    width:100%;
+    max-height:450px;
+    object-fit:cover;
+}
+
+.carousel-control{
+    cursor:pointer;
+    position:absolute;
+    top:50%;
+    width:50px;
+    height:50px;
+    background:rgba(0,0,0,0.5);
+    color:white;
+    transform:translateY(-50%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.carousel-control.prev{
+    left:10px;
+}
+
+.carousel-control.next{
+    right:10px;
+}
+
+/* Art gallery */
+
+.art-gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,160px));
+    justify-content:center;
+    gap:15px;
+    margin-top:25px;
+}
+
+.art-gallery img{
+    width:160px;
+    height:130px;
+    object-fit:cover;
+    border-radius:8px;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    transition:transform 0.3s ease;
+    cursor:pointer;
+}
+
+.art-gallery img:hover{
+    transform:scale(1.35);
+    z-index:10;
+}
+
+</style>
 </head>
+
 <body>
-    <img src="header.png" alt="Header" class="header-image">
 
-    <div class="welcome-section">
-        <h1 class="name">Maria Koukharsky</h1>
-        <h2>Welcome to my Portfolio!</h2>
-        
-        <div class="intro-section">
-            <p>I am Maria, and I am from Argentina. I am a Computing student at Queen's University. Having lived in Argentina, Brazil, Egypt, and Oman, I have developed strong adaptability, teamwork, and communication skills. Beyond academics, I am committed to leadership and community initiatives. My technical skills include Python, HTML, CSS, JavaScript, and Microsoft 365, alongside experience in project management and event organization. Fluent in Spanish, English, and Portuguese, I thrive in diverse environments. I am eager to leverage technology for social good, support equity-focused initiatives, and foster inclusive communities.</p>
-            
-            <img src="me and cat.jpg" alt="Maria with her cat" class="personal-image">
-        </div>
-        
-        <p>Scroll down to see my projects!</p>
-        
-        <div class="social-buttons">
-            <a href="https://www.linkedin.com/in/maria-koukharsky-24286b296/" target="_blank" class="social-button">
-                LinkedIn
-            </a>
-            <a href="https://github.com/mkoukhars" target="_blank" class="social-button">
-                GitHub
-            </a>
-        </div>
-    </div>
+<img src="header.png" alt="Header" class="header-image">
 
-    <div id="projects">
-        <div class="project-section">
-            <h2 class="project-title">Hack Her Website 2025 - Tricolour Savings</h2>
-            <p class="project-description">
-                My group participated in the QWIC Hackathon and got Best Beginner Hack with our website demo with our idea to create a student-friendly website REUSING and RECYCLING old textbooks, calculators, student ID holders, and more!
-            </p>
-            
-            <div class="carousel" id="projectCarousel1">
-                <div class="carousel-item active">
-                    <img src="tcs logo.png" alt="Tricolour Savings Logo">
-                </div>
-                <div class="carousel-item">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ks56YXHU9E8" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="carousel-control prev" onclick="changeSlide(this, -1)">&#10094;</div>
-                <div class="carousel-control next" onclick="changeSlide(this, 1)">&#10095;</div>
-            </div>
+<div class="welcome-section">
 
-            <div class="social-buttons" style="margin-top: 20px;">
-                <a href="https://devpost.com/software/tricolour-savings" target="_blank" class="social-button">
-                    Devpost
-                </a>
-            </div>
-        </div>
+<h1 class="name">Maria Koukharsky</h1>
+<h2>Welcome to my Portfolio!</h2>
 
-        <div class="project-section">
-            <h2 class="project-title">Biohack 2025 Website - MAYLA</h2>
-            <p class="project-description">
-                My team participated on the Synapsis Biohackathon where we got awarded third place. The Problem we focused on resolving was the issue of how many patients eager to participate in clinical trials struggle to find opportunities due to lack of awareness, slow recruitment, and accessibility barriers. Our solution? A streamlined physician-patient platform to bridge this gap. I took charge of developing the demo prototype and coding the platform, which enables physicians to upload patient medical files and then would go on to match patients with relevant clinical trials and provide a community space for support. 
-            </p>
-            
-            <div class="carousel" id="projectCarousel2">
-                <div class="carousel-item active">
-                    <img src="mayla.png" alt="MAYLA Project Image">
-                </div>
-                <div class="carousel-item">
-                    <video width="560" height="315" controls>
-                        <source src="vid for biohack.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="carousel-control prev" onclick="changeSlide(this, -1)">&#10094;</div>
-                <div class="carousel-control next" onclick="changeSlide(this, 1)">&#10095;</div>
-            </div>
+<div class="intro-section">
 
-            <div class="social-buttons" style="margin-top: 20px;">
-                <a href="https://github.com/mkoukhars/BIOHACKATHON" target="_blank" class="social-button">
-                    GitHub Repository
-                </a>
-            </div>
-        </div>
-    </div>
+<p>
+I am Maria, and I am from Argentina. I am a Computing student at Queen's University. Having lived in Argentina, Brazil, Egypt, and Oman, I have developed strong adaptability, teamwork, and communication skills. Beyond academics, I am committed to leadership and community initiatives. My technical skills include Python, HTML, CSS, JavaScript, and Microsoft 365, alongside experience in project management and event organization. Fluent in Spanish, English, and Portuguese, I thrive in diverse environments. I am eager to leverage technology for social good, support equity-focused initiatives, and foster inclusive communities.
+</p>
 
-    <script>
-        function changeSlide(carousel, direction) {
-            const slides = carousel.closest('.carousel').querySelectorAll('.carousel-item');
-            const currentSlide = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
-            
-            slides[currentSlide].classList.remove('active');
-            const newSlideIndex = (currentSlide + direction + slides.length) % slides.length;
-            slides[newSlideIndex].classList.add('active');
-        }
-    </script>
+<img src="me and cat.jpg" alt="Maria with her cat" class="personal-image">
+
+</div>
+
+<p>Scroll down to see my projects!</p>
+
+<div class="social-buttons">
+
+<a href="https://www.linkedin.com/in/maria-koukharsky-24286b296/" target="_blank" class="social-button">
+LinkedIn
+</a>
+
+<a href="https://github.com/mkoukhars" target="_blank" class="social-button">
+GitHub
+</a>
+
+</div>
+
+</div>
+
+<div id="projects">
+
+<!-- MEMOME -->
+
+<div class="project-section">
+
+<h2 class="project-title">QUX Designathon App Prototype: MemoMe</h2>
+
+<p class="project-description">
+My team and I built the prototype of an app where friends can share pictures in a polaroid scrapbook format and decorate and comment on them together. The goal was to make photos feel like forever memories while keeping them more personal and private than traditional social media platforms. It was also a great opportunity to learn a lot about Figma.
+</p>
+
+<img src="memome.png" alt="MemoMe Prototype" class="project-image">
+
+<div class="social-buttons">
+
+<a href="https://www.figma.com/proto/PNhRB2qLqH0kD4tEsj4cEY/PROJECT-QUX-APP?node-id=0-1&t=hZWNdWNTC73TMXDs-1"
+target="_blank"
+class="social-button">
+View Figma Prototype
+</a>
+
+</div>
+
+</div>
+
+<!-- HACKHER -->
+
+<div class="project-section">
+
+<h2 class="project-title">Hack Her Website 2025 - Tricolour Savings</h2>
+
+<p class="project-description">
+My group participated in the QWIC Hackathon and got Best Beginner Hack with our website demo with our idea to create a student-friendly website REUSING and RECYCLING old textbooks, calculators, student ID holders, and more!
+</p>
+
+<div class="carousel">
+
+<div class="carousel-item active">
+<img src="tcs logo.png" alt="Tricolour Savings Logo">
+</div>
+
+<div class="carousel-item">
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/Ks56YXHU9E8"
+frameborder="0"
+allowfullscreen>
+</iframe>
+</div>
+
+<div class="carousel-control prev" onclick="changeSlide(this,-1)">&#10094;</div>
+<div class="carousel-control next" onclick="changeSlide(this,1)">&#10095;</div>
+
+</div>
+
+<div class="social-buttons" style="margin-top:20px">
+
+<a href="https://devpost.com/software/tricolour-savings"
+target="_blank"
+class="social-button">
+Devpost
+</a>
+
+</div>
+
+</div>
+
+<!-- BIOHACK -->
+
+<div class="project-section">
+
+<h2 class="project-title">Biohack 2025 Website - MAYLA</h2>
+
+<p class="project-description">
+My team participated in the Synapsis Biohackathon where we were awarded third place. The problem we focused on was that many patients eager to participate in clinical trials struggle to find opportunities due to lack of awareness, slow recruitment, and accessibility barriers. Our solution was a physician–patient platform to bridge this gap. I developed the demo prototype and coded the platform enabling physicians to upload patient files and match patients with relevant clinical trials while providing a support community.
+</p>
+
+<div class="carousel">
+
+<div class="carousel-item active">
+<img src="mayla.png" alt="MAYLA Project">
+</div>
+
+<div class="carousel-item">
+<video width="560" height="315" controls>
+<source src="vid for biohack.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="carousel-control prev" onclick="changeSlide(this,-1)">&#10094;</div>
+<div class="carousel-control next" onclick="changeSlide(this,1)">&#10095;</div>
+
+</div>
+
+<div class="social-buttons" style="margin-top:20px">
+
+<a href="https://github.com/mkoukhars/BIOHACKATHON"
+target="_blank"
+class="social-button">
+GitHub Repository
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ART -->
+
+<div class="project-section">
+
+<h2 class="project-title">Have a look at my art</h2>
+
+<p class="project-description">
+Outside of computing and hackathons, I also enjoy creating art. Drawing and designing have always been a creative outlet for me and a way to explore ideas visually. Here are some pieces I’ve worked on, mostly oil paintings and a Xilogravura (woodcut print).
+</p>
+
+<div class="art-gallery">
+
+<img src="datesoilpainting.jpg" alt="">
+<img src="floweroilpainting (1).jpg" alt="">
+<img src="xilogravuraprint.jpg" alt="">
+<img src="peruoilpainting.jpg" alt="">
+<img src="patagoniaoilpainting.jpg" alt="">
+<img src="catstatue.jpg" alt="">
+<img src="bahiaoilpainting.jpg" alt="">
+<img src="cellsoilpainting.jpg" alt="">
+
+</div>
+
+</div>
+
+<script>
+
+function changeSlide(carousel,direction){
+
+const slides = carousel.closest('.carousel').querySelectorAll('.carousel-item');
+
+const currentSlide = Array.from(slides).findIndex(slide =>
+slide.classList.contains('active'));
+
+slides[currentSlide].classList.remove('active');
+
+const newSlideIndex =
+(currentSlide + direction + slides.length) % slides.length;
+
+slides[newSlideIndex].classList.add('active');
+
+}
+
+</script>
+
 </body>
 </html>
