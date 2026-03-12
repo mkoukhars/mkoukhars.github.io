@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
 <style>
-
 body{
     font-family: Arial, sans-serif;
     line-height:1.6;
@@ -146,13 +145,13 @@ body{
 }
 
 /* Art gallery */
-
 .art-gallery{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(140px,160px));
     justify-content:center;
     gap:15px;
     margin-top:25px;
+    overflow:visible;
 }
 
 .art-gallery img{
@@ -166,10 +165,9 @@ body{
 }
 
 .art-gallery img:hover{
-    transform:scale(1.35);
-    z-index:10;
+    transform:scale(2);
+    z-index:20;
 }
-
 </style>
 </head>
 
@@ -178,42 +176,32 @@ body{
 <img src="header.png" alt="Header" class="header-image">
 
 <div class="welcome-section">
-
 <h1 class="name">Maria Koukharsky</h1>
 <h2>Welcome to my Portfolio!</h2>
 
 <div class="intro-section">
-
 <p>
-I am Maria, and I am from Argentina. I am a Computing student at Queen's University. Having lived in Argentina, Brazil, Egypt, and Oman, I have developed strong adaptability, teamwork, and communication skills. Beyond academics, I am committed to leadership and community initiatives. My technical skills include Python, HTML, CSS, JavaScript, and Microsoft 365, alongside experience in project management and event organization. Fluent in Spanish, English, and Portuguese, I thrive in diverse environments. I am eager to leverage technology for social good, support equity-focused initiatives, and foster inclusive communities.
+I am Maria, and I am from Argentina. I am a Computing student at Queen's University. Having lived in Argentina, Brazil, Egypt, and Oman, I feel like I am very adaptable. My technical skills include Python, HTML, CSS, and JavaScript, alongside experience in project management and event organization. Fluent in Spanish, English, and Portuguese.
 </p>
-
 <img src="me and cat.jpg" alt="Maria with her cat" class="personal-image">
-
 </div>
 
 <p>Scroll down to see my projects!</p>
 
 <div class="social-buttons">
-
 <a href="https://www.linkedin.com/in/maria-koukharsky-24286b296/" target="_blank" class="social-button">
 LinkedIn
 </a>
-
 <a href="https://github.com/mkoukhars" target="_blank" class="social-button">
 GitHub
 </a>
-
 </div>
-
 </div>
 
 <div id="projects">
 
 <!-- MEMOME -->
-
 <div class="project-section">
-
 <h2 class="project-title">QUX Designathon App Prototype: MemoMe</h2>
 
 <p class="project-description">
@@ -223,33 +211,31 @@ My team and I built the prototype of an app where friends can share pictures in 
 <img src="memome.png" alt="MemoMe Prototype" class="project-image">
 
 <div class="social-buttons">
-
 <a href="https://www.figma.com/proto/PNhRB2qLqH0kD4tEsj4cEY/PROJECT-QUX-APP?node-id=0-1&t=hZWNdWNTC73TMXDs-1"
 target="_blank"
 class="social-button">
 View Figma Prototype
 </a>
 
+<a href="https://www.figma.com/design/PNhRB2qLqH0kD4tEsj4cEY/PROJECT-QUX-APP?node-id=0-1&m=dev&t=tmstwskGTl7t7y1I-1"
+target="_blank"
+class="social-button">
+View Dev Link
+</a>
 </div>
-
 </div>
 
 <!-- HACKHER -->
-
 <div class="project-section">
-
 <h2 class="project-title">Hack Her Website 2025 - Tricolour Savings</h2>
-
 <p class="project-description">
 My group participated in the QWIC Hackathon and got Best Beginner Hack with our website demo with our idea to create a student-friendly website REUSING and RECYCLING old textbooks, calculators, student ID holders, and more!
 </p>
 
 <div class="carousel">
-
 <div class="carousel-item active">
 <img src="tcs logo.png" alt="Tricolour Savings Logo">
 </div>
-
 <div class="carousel-item">
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/Ks56YXHU9E8"
@@ -257,77 +243,54 @@ frameborder="0"
 allowfullscreen>
 </iframe>
 </div>
-
 <div class="carousel-control prev" onclick="changeSlide(this,-1)">&#10094;</div>
 <div class="carousel-control next" onclick="changeSlide(this,1)">&#10095;</div>
-
 </div>
 
 <div class="social-buttons" style="margin-top:20px">
-
-<a href="https://devpost.com/software/tricolour-savings"
-target="_blank"
-class="social-button">
+<a href="https://devpost.com/software/tricolour-savings" target="_blank" class="social-button">
 Devpost
 </a>
-
+</div>
 </div>
 
-</div>
-
-<!-- BIOHACK -->
 
 <div class="project-section">
-
 <h2 class="project-title">Biohack 2025 Website - MAYLA</h2>
-
 <p class="project-description">
 My team participated in the Synapsis Biohackathon where we were awarded third place. The problem we focused on was that many patients eager to participate in clinical trials struggle to find opportunities due to lack of awareness, slow recruitment, and accessibility barriers. Our solution was a physician–patient platform to bridge this gap. I developed the demo prototype and coded the platform enabling physicians to upload patient files and match patients with relevant clinical trials while providing a support community.
 </p>
 
 <div class="carousel">
-
 <div class="carousel-item active">
 <img src="mayla.png" alt="MAYLA Project">
 </div>
-
 <div class="carousel-item">
 <video width="560" height="315" controls>
 <source src="vid for biohack.mp4" type="video/mp4">
 </video>
 </div>
-
 <div class="carousel-control prev" onclick="changeSlide(this,-1)">&#10094;</div>
 <div class="carousel-control next" onclick="changeSlide(this,1)">&#10095;</div>
-
 </div>
 
 <div class="social-buttons" style="margin-top:20px">
-
-<a href="https://github.com/mkoukhars/BIOHACKATHON"
-target="_blank"
-class="social-button">
+<a href="https://github.com/mkoukhars/BIOHACKATHON" target="_blank" class="social-button">
 GitHub Repository
 </a>
-
+</div>
 </div>
 
 </div>
 
-</div>
-
-<!-- ART -->
 
 <div class="project-section">
-
-<h2 class="project-title">Have a look at my art</h2>
-
+<h2 class="project-title">My Art</h2>
 <p class="project-description">
-Outside of computing and hackathons, I also enjoy creating art. Drawing and designing have always been a creative outlet for me and a way to explore ideas visually. Here are some pieces I’ve worked on, mostly oil paintings and a Xilogravura (woodcut print).
+Outside of computing and hackathons, I also enjoy creating art. Drawing, painting and designing have always been a creative outlet for me and a way to explore ideas. Here are some pieces I’ve worked on, mostly oil paintings, a Xilogravura (woodcut print) and a statue!
 </p>
 
 <div class="art-gallery">
-
 <img src="datesoilpainting.jpg" alt="">
 <img src="floweroilpainting (1).jpg" alt="">
 <img src="xilogravuraprint.jpg" alt="">
@@ -336,29 +299,17 @@ Outside of computing and hackathons, I also enjoy creating art. Drawing and desi
 <img src="catstatue.jpg" alt="">
 <img src="bahiaoilpainting.jpg" alt="">
 <img src="cellsoilpainting.jpg" alt="">
-
 </div>
-
 </div>
 
 <script>
-
 function changeSlide(carousel,direction){
-
-const slides = carousel.closest('.carousel').querySelectorAll('.carousel-item');
-
-const currentSlide = Array.from(slides).findIndex(slide =>
-slide.classList.contains('active'));
-
-slides[currentSlide].classList.remove('active');
-
-const newSlideIndex =
-(currentSlide + direction + slides.length) % slides.length;
-
-slides[newSlideIndex].classList.add('active');
-
+    const slides = carousel.closest('.carousel').querySelectorAll('.carousel-item');
+    const currentSlide = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+    slides[currentSlide].classList.remove('active');
+    const newSlideIndex = (currentSlide + direction + slides.length) % slides.length;
+    slides[newSlideIndex].classList.add('active');
 }
-
 </script>
 
 </body>
